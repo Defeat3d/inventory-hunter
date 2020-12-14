@@ -1,10 +1,8 @@
-import locale
 import logging
-
 # required for price parsing logic
-locale.setlocale(locale.LC_ALL, '')
-
+import re
 from abc import ABC, abstractmethod
+
 from bs4 import BeautifulSoup
 
 
@@ -36,8 +34,7 @@ class ScrapeResult(ABC):
             return
 
         try:
-            currency_symbol = locale.localeconv()['currency_symbol']
-            self.price = locale.atof(price_str.replace(currency_symbol, '').strip())
+            self.price = re.sub("[^0123456789.]", "", price_str)
             return price_str if price_str else None
         except Exception as e:
             self.logger.warning(f'unable to convert "{price_str}" to float... caught exception: {e}')

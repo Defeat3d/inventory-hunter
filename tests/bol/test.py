@@ -3,7 +3,7 @@ import pathlib
 import unittest
 
 from driver import HttpGetResponse
-from scraper.amazon import AmazonScrapeResult as ScrapeResult
+from scraper.bol import BolScrapeResult as ScrapeResult
 
 
 def load_result(filename):
@@ -21,7 +21,7 @@ class InStockFixture(unittest.TestCase):
         self.assertTrue(self.result)
 
     def test_price(self):
-        self.assertEqual(self.result.price, '599.66')
+        self.assertEqual(self.result.price, '398')
 
 
 class OutOfStockFixture(unittest.TestCase):

@@ -28,7 +28,7 @@ These steps *should* work on any supported Docker platform, but they have been s
     $ cd inventory-hunter
 
     pi@raspberrypi:~/inventory-hunter
-    $ docker pull Defeat3d/inv-hunter:latest
+    $ docker pull defeat3d/inv-hunter:latest
     ```
 
 2. Create your own configuration file based on one of the provided examples:

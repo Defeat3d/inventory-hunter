@@ -5,6 +5,9 @@ import scraper.bhphotovideo
 import scraper.microcenter
 import scraper.newegg
 import scraper.walmart
+import scraper.bol
+import scraper.coolblue
+import scraper.mediamarkt
 
 from scraper.common import ScraperFactory
 

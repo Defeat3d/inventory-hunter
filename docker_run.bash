@@ -16,8 +16,8 @@ usage() {
 
 [ $# -eq 0 ] && usage
 
-alerter="email"
-default_image="ericjmarti/inventory-hunter:latest"
+alerter="discord"
+default_image="defeat3d/inv-hunter:latest"
 image=$default_image
 
 while getopts a:c:d:e:i:q:r:w: arg

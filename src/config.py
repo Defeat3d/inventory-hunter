@@ -1,4 +1,4 @@
-import urllib
+import urllib.parse
 import yaml
 
 from collections import Counter

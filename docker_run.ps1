@@ -24,7 +24,7 @@ if ($AlerterConfig) {
     }
 }
 
-if ($Image -eq "ericjmarti/inventory-hunter:latest") {
+if ($Image -eq "defeat3d/inv-hunter:latest") {
     docker pull $Image
 } else {
     $Result = docker images -q $Image

@@ -15,11 +15,11 @@ You will also need one of the following:
 
 ## Quick Start
 
-For instructions specific to Windows, please see this guide instead: [Instructions for Windows](https://github.com/Defeat3d/inv-hunter/wiki/Instructions-for-Windows)
+For instructions specific to Windows, please see this guide instead: [Instructions for Windows](https://github.com/Defeat3d/inventory-hunter/wiki/Instructions-for-Windows)
 
 These steps *should* work on any supported Docker platform, but they have been specifically tested on Raspberry Pi OS with Docker already installed.
 
-1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/defeat3d/inv-hunter):
+1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/defeat3d/inventory-hunter):
     ```
     pi@raspberrypi:~
     $ git clone https://github.com/Defeat3d/inventory-hunter
@@ -28,7 +28,7 @@ These steps *should* work on any supported Docker platform, but they have been s
     $ cd inventory-hunter
 
     pi@raspberrypi:~/inventory-hunter
-    $ docker pull defeat3d/inv-hunter:latest
+    $ docker pull defeat3d/inventory-hunter:latest
     ```
 
 2. Create your own configuration file based on one of the provided examples:

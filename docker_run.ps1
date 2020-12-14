@@ -4,7 +4,7 @@ param (
     [String] $Config = "",
     [String] $ChatId = "",
     [String] $Email = "",
-    [String] $Image = "defeat3d/inv-hunter:latest",
+    [String] $Image = "defeat3d/inventory-hunter:latest",
     [String] $Relay = "",
     [String] $Webhook = ""
 )
@@ -24,7 +24,7 @@ if ($AlerterConfig) {
     }
 }
 
-if ($Image -eq "defeat3d/inv-hunter:latest") {
+if ($Image -eq "defeat3d/inventory-hunter:latest") {
     docker pull $Image
 } else {
     $Result = docker images -q $Image

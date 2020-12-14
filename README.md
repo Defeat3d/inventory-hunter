@@ -2,8 +2,6 @@
 
 ![Build](https://github.com/EricJMarti/inventory-hunter/workflows/Build/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ericjmarti/inventory-hunter) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/ericjmarti/inventory-hunter/latest)
 
-This bot helped me snag an RTX 3070... hopefully it will help you get your hands on your next CPU, GPU, or game console.
-
 ## Requirements
 
 - Raspberry Pi 2 or newer (alternatively, you can use an always-on PC or Mac)
@@ -17,20 +15,20 @@ You will also need one of the following:
 
 ## Quick Start
 
-For instructions specific to Windows, please see this guide instead: [Instructions for Windows](https://github.com/EricJMarti/inventory-hunter/wiki/Instructions-for-Windows)
+For instructions specific to Windows, please see this guide instead: [Instructions for Windows](https://github.com/Defeat3d/inv-hunter/wiki/Instructions-for-Windows)
 
 These steps *should* work on any supported Docker platform, but they have been specifically tested on Raspberry Pi OS with Docker already installed.
 
-1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/ericjmarti/inventory-hunter):
+1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/defeat3d/inv-hunter):
     ```
     pi@raspberrypi:~
-    $ git clone https://github.com/EricJMarti/inventory-hunter
+    $ git clone https://github.com/Defeat3d/inventory-hunter
 
     pi@raspberrypi:~
     $ cd inventory-hunter
 
     pi@raspberrypi:~/inventory-hunter
-    $ docker pull ericjmarti/inventory-hunter:latest
+    $ docker pull defeat3d/inv-hunter:latest
     ```
 
 2. Create your own configuration file based on one of the provided examples:

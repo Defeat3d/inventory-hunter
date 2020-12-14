@@ -1,5 +1,5 @@
 ---
-refresh_interval: 2 # seconds
+refresh_interval: 30 # seconds
 max_price: 9999999 # dollars/euros/etc
 urls:
   - https://www.coolblue.nl/product/865867/playstation-5-digital-edition.html

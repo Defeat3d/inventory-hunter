@@ -34,7 +34,7 @@ class MediamarktScraper(Scraper):
 
     @staticmethod
     def get_driver_type():
-        return 'selenium'
+        return 'request'
 
     @staticmethod
     def get_result_type():

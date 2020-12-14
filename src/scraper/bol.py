@@ -7,6 +7,7 @@ class BolScrapeResult(ScrapeResult):
 
         # get name of product
         tag = self.soup.body.select_one('h1.page-heading > span.h-boxedright--xs')
+        self.logger.warning(f'title: {tag}')
         if tag:
             alert_content += tag.text.strip() + '\n'
         else:
@@ -14,6 +15,7 @@ class BolScrapeResult(ScrapeResult):
 
         # get listed price
         tag = self.soup.body.select_one('span.promo-price')
+        self.logger.warning(f'price: {tag}')
         price_str = self.set_price(tag)
         if price_str:
             alert_subject = f'In Stock for {price_str}'
@@ -29,7 +31,7 @@ class BolScraper(Scraper):
 
     @staticmethod
     def get_driver_type():
-        return 'selenium'
+        return 'request'
 
     @staticmethod
     def get_result_type():

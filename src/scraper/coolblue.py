@@ -30,11 +30,11 @@ class CoolblueScrapeResult(ScrapeResult):
 class CooblueScraper(Scraper):
     @staticmethod
     def get_domain():
-        return 'bol'
+        return 'coolblue'
 
     @staticmethod
     def get_driver_type():
-        return 'selenium'
+        return 'request'
 
     @staticmethod
     def get_result_type():

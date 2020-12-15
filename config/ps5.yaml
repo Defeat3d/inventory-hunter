@@ -3,6 +3,8 @@ refresh_interval: 10 # seconds
 max_price: 9999999 # dollars/euros/etc
 urls:
   - https://www.coolblue.nl/product/865867/playstation-5-digital-edition.html
+  - https://www.coolblue.nl/product/865866/playstation-5.html
   - https://www.mediamarkt.nl/nl/product/_sony-playstation-5-digital-edition-1665134.html
+  - https://www.mediamarkt.nl/nl/product/_sony-playstation-5-disk-edition-1664768.html
   - https://www.bol.com/nl/p/sony-playstation-5-console/9300000004162282
 ...

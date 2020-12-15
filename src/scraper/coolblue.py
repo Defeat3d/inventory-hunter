@@ -20,10 +20,13 @@ class CoolblueScrapeResult(ScrapeResult):
             alert_subject = f'In Stock for {price_str}'
 
         # check for add to cart button
-        tag = self.soup.body.select_one('button.button--order')
-        if tag:
-            self.alert_subject = alert_subject
-            self.alert_content = f'{alert_content.strip()}\n{self.url}'
+        tags = self.soup.body.select_one('button.button--order').select_one('div')
+        if tags:
+            tags = tags.find_all('div')[1].find_all('span')
+            for tag in tags:
+                if tag and 'in mijn winkelwagen' in tag.text.lower():
+                    self.alert_subject = alert_subject
+                    self.alert_content = f'{alert_content.strip()}\n{self.url}'
 
 
 @ScraperFactory.register

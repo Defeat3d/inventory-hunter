@@ -74,7 +74,7 @@ class Engine:
                 self.send_alert(s, result, 'now in stock!')
 
             # is the current price low enough?
-            elif self.max_price is None or current_price <= self.max_price:
+            elif self.max_price is None or int(current_price) <= self.max_price:
                 self.send_alert(s, result, f'now in stock at {current_price}!')
 
             else:

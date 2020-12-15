@@ -10,7 +10,6 @@ class Engine:
     def __init__(self, alerters, config, scrapers):
         self.alerters = alerters
         self.refresh_interval = config.refresh_interval
-        self.max_price = config.max_price
         self.scheduler = sched.scheduler()
         for s in scrapers:
             self.schedule(s)
@@ -58,11 +57,7 @@ class Engine:
 
             # has the price gone down?
             elif current_price < last_price:
-
-                if self.max_price is None or current_price <= self.max_price:
-                    self.send_alert(s, result, f'now in stock at {current_price}!')
-                else:
-                    s.logger.info(f'now in stock at {current_price}... still too expensive')
+                self.send_alert(s, result, f'now in stock at {current_price}!')
 
             else:
                 s.logger.info(f'now in stock at {current_price}... more expensive than before :(')
@@ -74,11 +69,7 @@ class Engine:
                 self.send_alert(s, result, 'now in stock!')
 
             # is the current price low enough?
-            elif self.max_price is None or int(current_price) <= self.max_price:
-                self.send_alert(s, result, f'now in stock at {current_price}!')
-
-            else:
-                s.logger.info(f'now in stock at {current_price}... too expensive')
+            self.send_alert(s, result, f'now in stock at {current_price}!')
 
         elif not currently_in_stock and result.has_phrase('are you a human'):
 

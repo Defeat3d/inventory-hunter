@@ -1,6 +1,5 @@
 ---
 refresh_interval: 3 # seconds
-max_price: 9999999 # dollars/euros/etc
 urls:
   - https://www.coolblue.nl/product/852042/apple-airpods-pro-met-draadloze-oplaadcase.html
   - https://www.coolblue.nl/product/865867/playstation-5-digital-edition.html

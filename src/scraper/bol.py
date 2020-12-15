@@ -31,7 +31,7 @@ class BolScraper(Scraper):
 
     @staticmethod
     def get_driver_type():
-        return 'request'
+        return 'requests'
 
     @staticmethod
     def get_result_type():

@@ -2,7 +2,6 @@ import logging
 # required for price parsing logic
 import re
 from abc import ABC, abstractmethod
-
 from bs4 import BeautifulSoup
 
 

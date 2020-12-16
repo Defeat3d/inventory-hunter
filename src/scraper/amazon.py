@@ -21,7 +21,7 @@ class AmazonScrapeResult(ScrapeResult):
 
         # check for add to cart button
         tag = self.soup.body.select_one('span.a-button-inner > span#submit\\.add-to-cart-announce')
-        if tag and any(s in tag.text.lower() for s in ('in winkelwagen', 'add to cart')):
+        if tag and any(s in tag.text.lower() for s in ('in winkelwagen', 'in den einkaufswagen', 'add to cart')):
             self.alert_subject = alert_subject
             self.alert_content = f'{alert_content.strip()}\n{self.url}'
 

@@ -34,6 +34,8 @@ class Config:
                 netloc = netloc.replace('.com', '')
             if netloc.endswith('.nl'):
                 netloc = netloc.replace('.nl', '')
+            if netloc.endswith('.de'):
+                netloc = netloc.replace('.de', '')
             for c in ('a', 'e', 'i', 'o', 'u'):
                 netloc = netloc.replace(c, '')
             netloc = netloc.replace('.', '_')
